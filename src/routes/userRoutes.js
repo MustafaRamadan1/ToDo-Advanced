@@ -20,8 +20,9 @@ router.patch(
   updateUserPassword
 );
 
+router.get("/test", isAuth, Authorization("employee"), getAllUsers);
 
-router.get("/users", isAuth, Authorization("admin"), getAllUsers);
-router.get('/users/:id', isAuth,Authorization('admin'), getUserById);
+router.get("/employees", isAuth, Authorization("leader"), getAllUsers);
+router.get('/employees/:id', isAuth,Authorization('leader'), getUserById);
 
 export default router;
