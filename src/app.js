@@ -50,11 +50,12 @@ import userRouter from "./routes/userRoutes.js";
 import AppError from "./utils/AppError.js";
 import globalErrorHandler from "./middlewares/globalerrorHandler.js";
 import logger from "./utils/logger.js";
+import ToDoRouter from "./routes/toDoRoutes.js";
 
 // App Routes
 
 app.use("/api/v1", userRouter);
-
+app.use('/api/v1/toDos',ToDoRouter)
 
 
 //  not found route for non exist routes

@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "cloudinary": "^2.5.1",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "express-mongo-sanitize": "^2.2.0",
@@ -20,9 +21,13 @@
     "helmet": "^8.0.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.7.2",
+    "multer": "^1.4.5-lts.1",
     "nodemailer": "^6.9.15",
     "pug": "^3.0.3",
+    "sharp": "^0.33.5",
     "slug": "^10.0.0",
+    "todo-advanced": "file:",
+    "uuid": "^10.0.0",
     "validator": "^13.12.0",
     "winston": "^3.15.0",
     "xss-clean": "^0.1.4"

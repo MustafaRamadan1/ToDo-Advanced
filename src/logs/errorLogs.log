@@ -91,3 +91,33 @@
   message: 'Error: You are not logging in , Please Login ',
   timestamp: '2024-10-25T02:29:43.725Z'
 }
+{
+  error: { statusCode: 500, status: 'error', message: 'i is not defined' },
+  stack: undefined,
+  level: 'error',
+  message: 'Something went wrong',
+  timestamp: '2024-10-25T14:16:06.153Z'
+}
+{
+  error: {
+    statusCode: 500,
+    status: 'error',
+    message: 'cloudinaryImgUrl is not defined'
+  },
+  stack: undefined,
+  level: 'error',
+  message: 'Something went wrong',
+  timestamp: '2024-10-25T14:16:59.798Z'
+}
+{
+  stack: undefined,
+  level: 'error',
+  message: 'Error: Please provide all required fields',
+  timestamp: '2024-10-25T14:18:00.558Z'
+}
+{
+  stack: undefined,
+  level: 'error',
+  message: 'Error: Please provide all required fields',
+  timestamp: '2024-10-25T14:28:31.310Z'
+}

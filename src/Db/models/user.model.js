@@ -31,12 +31,6 @@ const userSchema = new mongoose.Schema(
       },
       default: "employee",
     },
-
-    
-    isActive: {
-      type: Boolean,
-      default: false,
-    },
   },
   {
     timestamps: true,

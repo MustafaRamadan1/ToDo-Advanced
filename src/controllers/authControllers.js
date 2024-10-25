@@ -12,12 +12,13 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 export const signUp = catchAsync(async (req, res, next) => {
-  const { name, email, password } = req.body;
+  const { name, email, password,role } = req.body;
 
   const newUser = await User.create({
     name: name.split(" ")[0],
     email,
-    password
+    password,
+    role
   });
 
   if (!newUser) {

@@ -720,3 +720,518 @@
   message: 'GET /api/v1/test 200 387ms',
   timestamp: '2024-10-25T02:30:32.219Z'
 }
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T14:12:00.664Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T14:12:00.677Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T14:14:55.840Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T14:14:55.854Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T14:15:31.980Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T14:15:31.988Z'
+}
+{
+  error: { statusCode: 500, status: 'error', message: 'i is not defined' },
+  stack: undefined,
+  level: 'error',
+  message: 'Something went wrong',
+  timestamp: '2024-10-25T14:16:06.153Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/v1/toDos/',
+      headers: {
+        'user-agent': 'PostmanRuntime/7.42.0',
+        accept: '*/*',
+        'postman-token': 'f0f7c3a2-60d8-4562-b481-86bb60bef942',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-type': 'multipart/form-data; boundary=--------------------------102101230883294958515442',
+        'content-length': '623900'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/v1/toDos/',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 21
+  },
+  level: 'info',
+  message: 'POST /api/v1/toDos/ 500 21ms',
+  timestamp: '2024-10-25T14:16:06.162Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T14:16:27.594Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T14:16:27.612Z'
+}
+{
+  error: {
+    statusCode: 500,
+    status: 'error',
+    message: 'cloudinaryImgUrl is not defined'
+  },
+  stack: undefined,
+  level: 'error',
+  message: 'Something went wrong',
+  timestamp: '2024-10-25T14:16:59.798Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/v1/toDos/',
+      headers: {
+        'user-agent': 'PostmanRuntime/7.42.0',
+        accept: '*/*',
+        'postman-token': '30fd7a3f-a3a9-4ff5-97d3-446111e0f8b0',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-type': 'multipart/form-data; boundary=--------------------------443920051188107084871538',
+        'content-length': '623900'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/v1/toDos/',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 12898
+  },
+  level: 'info',
+  message: 'POST /api/v1/toDos/ 500 12898ms',
+  timestamp: '2024-10-25T14:16:59.802Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T14:17:20.692Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T14:17:20.710Z'
+}
+{
+  stack: undefined,
+  level: 'error',
+  message: 'Error: Please provide all required fields',
+  timestamp: '2024-10-25T14:18:00.558Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/v1/toDos/',
+      headers: {
+        'user-agent': 'PostmanRuntime/7.42.0',
+        accept: '*/*',
+        'postman-token': 'f41c4221-0444-49ab-a5d3-e00070801b8e',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-type': 'multipart/form-data; boundary=--------------------------508251548116170551769977',
+        'content-length': '623900'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/v1/toDos/',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 12916
+  },
+  level: 'info',
+  message: 'POST /api/v1/toDos/ 400 12916ms',
+  timestamp: '2024-10-25T14:18:00.574Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T14:18:29.020Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T14:18:29.032Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T14:18:37.283Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T14:18:37.295Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T14:19:26.530Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T14:19:26.539Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T14:19:35.638Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T14:19:35.648Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T14:19:52.770Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T14:19:52.802Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T14:19:59.899Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T14:19:59.908Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T14:20:03.084Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T14:20:03.094Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T14:20:09.607Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T14:20:09.617Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T14:20:18.624Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T14:20:18.647Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T14:20:27.736Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T14:20:27.755Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T14:20:50.571Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T14:20:50.584Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T14:21:00.711Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T14:21:00.727Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T14:21:17.523Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T14:21:17.529Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T14:21:32.267Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T14:21:32.285Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T14:21:37.689Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T14:21:37.702Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T14:21:44.244Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T14:21:44.257Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T14:21:52.547Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T14:21:52.556Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T14:21:58.776Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T14:21:58.786Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T14:22:15.593Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T14:22:15.603Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T14:23:57.443Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T14:23:57.452Z'
+}
+{
+  message: 'Email Sent to leader@gmail.com',
+  level: 'info',
+  timestamp: '2024-10-25T14:24:49.366Z'
+}
+{
+  userId: new ObjectId('671baa2fae11416bc9a32344'),
+  name: 'leader',
+  email: 'leader@gmail.com',
+  level: 'info',
+  message: 'Created the user and send OTP to the email',
+  timestamp: '2024-10-25T14:24:49.378Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/v1/auth/signup',
+      headers: {
+        'content-type': 'application/json',
+        'user-agent': 'PostmanRuntime/7.42.0',
+        accept: '*/*',
+        'postman-token': 'ebf3a272-dd20-46b0-b459-7bf5fee7bffb',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-length': '129'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/v1/auth/signup',
+      query: {}
+    },
+    res: { statusCode: 200 },
+    responseTime: 2371
+  },
+  level: 'info',
+  message: 'POST /api/v1/auth/signup 200 2371ms',
+  timestamp: '2024-10-25T14:24:49.395Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T14:27:55.558Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T14:27:55.588Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T14:28:10.361Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T14:28:10.380Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T14:28:15.184Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T14:28:15.192Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T14:28:19.545Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T14:28:19.552Z'
+}
+{
+  message: 'User Authenticated Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T14:28:31.301Z'
+}
+{
+  userId: new ObjectId('671baa2fae11416bc9a32344'),
+  url: '/api/v1/toDos/',
+  level: 'info',
+  message: 'User Authorized to access the route ',
+  timestamp: '2024-10-25T14:28:31.302Z'
+}
+{
+  stack: undefined,
+  level: 'error',
+  message: 'Error: Please provide all required fields',
+  timestamp: '2024-10-25T14:28:31.310Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/v1/toDos/',
+      headers: {
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MWJhYTJmYWUxMTQxNmJjOWEzMjM0NCIsImlhdCI6MTcyOTg2NjI4OSwiZXhwIjoxNzMwMTI1NDg5fQ._rK7VKMxfqrLtE92bFrZAiTxWgzDhHEtHWMEWgaFGkA',
+        'user-agent': 'PostmanRuntime/7.42.0',
+        accept: '*/*',
+        'postman-token': '148c4669-e8e2-453a-b891-dff0b5ca0ac4',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-type': 'multipart/form-data; boundary=--------------------------160800692323236263460605',
+        'content-length': '100957'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/v1/toDos/',
+      query: {}
+    },
+    res: { statusCode: 400 },
+    responseTime: 517
+  },
+  level: 'info',
+  message: 'POST /api/v1/toDos/ 400 517ms',
+  timestamp: '2024-10-25T14:28:31.320Z'
+}
+{
+  message: 'User Authenticated Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T14:28:59.861Z'
+}
+{
+  userId: new ObjectId('671baa2fae11416bc9a32344'),
+  url: '/api/v1/toDos/',
+  level: 'info',
+  message: 'User Authorized to access the route ',
+  timestamp: '2024-10-25T14:28:59.862Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/v1/toDos/',
+      headers: {
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MWJhYTJmYWUxMTQxNmJjOWEzMjM0NCIsImlhdCI6MTcyOTg2NjI4OSwiZXhwIjoxNzMwMTI1NDg5fQ._rK7VKMxfqrLtE92bFrZAiTxWgzDhHEtHWMEWgaFGkA',
+        'user-agent': 'PostmanRuntime/7.42.0',
+        accept: '*/*',
+        'postman-token': 'b470d520-862b-4e4f-854e-0052bc93fb04',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-type': 'multipart/form-data; boundary=--------------------------743341419306528686074147',
+        'content-length': '100957'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/v1/toDos/',
+      query: {}
+    },
+    res: { statusCode: 201 },
+    responseTime: 3282
+  },
+  level: 'info',
+  message: 'POST /api/v1/toDos/ 201 3282ms',
+  timestamp: '2024-10-25T14:29:02.710Z'
+}
