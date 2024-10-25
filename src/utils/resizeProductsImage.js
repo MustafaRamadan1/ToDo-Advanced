@@ -9,27 +9,10 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const resizeProductImg = catchAsync(async (req, res, next) => {
-  console.log("body", req.body);
+  if (req.file) {
+    const filepath = `${__dirname}/../uploads/tasks/${uuid()}.jpg`;
 
-  if (req.body.images && req.files.length === 0) {
-    req.images = [];
-    return next();
-  }
-
-  if (req.params.id && req.method === "PUT" && req.files.length === 0) {
-    req.images = [];
-    return next();
-  } else if (!req.files || req.files.length === 0)
-    return next(
-      new AppError(`No Images uploaded , Please Provide Images`, 400)
-    );
-
-  const images = [];
-  console.log(req.files.length);
-  for (let i = 0; i < req.files.length; i++) {
-    const filepath = `${__dirname}/../uploads/products/${uuid()}.jpg`;
-    // const filepath = `/tmp/${uuid()}.jpg`;
-    await sharp(req.files[i].buffer)
+    await sharp(req.file.buffer)
       .sharpen({
         sigma: 1,
         m1: 0.8,
@@ -44,11 +27,21 @@ const resizeProductImg = catchAsync(async (req, res, next) => {
         optimizeScans: true,
       })
       .toFile(filepath);
-    images.push(filepath);
-  }
 
-  req.images = images;
-  next();
-});
+
+    req.image = filepath;
+
+    return next();
+  } else {
+    if (req.params.id && req.method === "PUT") {
+      return next();
+    } else if (!req.file)
+      return next(new AppError(`Please Provide Image for the task`, 400));
+  }
+    next();
+  });
+
+ 
+
 
 export default resizeProductImg;

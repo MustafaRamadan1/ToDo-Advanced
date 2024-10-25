@@ -15,13 +15,9 @@ export const deletePhotoFromServer = async (filePath) => {
     });
   };
 
-export const uploadToCloudinary = async (imagesPath) => {
-    const cloudinaryImgUrl = [];
-  
-    for (let i = 0; i < imagesPath.length; i++) {
-      const result = await cloudinaryUploadImg(imagesPath[i]);
-      cloudinaryImgUrl.push(result);
-    }
-  
-    return cloudinaryImgUrl;
+export const uploadToCloudinary = async (imagePath) => {
+
+ 
+      const result = await cloudinaryUploadImg(imagePath);  
+    return result;
   };
