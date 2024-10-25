@@ -1,4 +1,3 @@
-import crypto from "crypto";
 import User from "../Db/models/user.model.js";
 import AppError from "../utils/AppError.js";
 import { catchAsync } from "../utils/catchAsync.js";
@@ -29,18 +28,14 @@ export const signUp = catchAsync(async (req, res, next) => {
     return next(new AppError(`Couldn't create new User`, 400));
   }
 
-  const otp = newUser.createOTP();
-  await newUser.save();
-
   const html = compileTemplate(`${__dirname}/../views/activateAccount.pug`, {
     firstName: newUser.name,
-    otpCode: otp
   });
 
   await sendEmail({
     to: newUser.email,
-    subject: "Verify Your Email",
-    text: `To Verfiy your account in our site , It's your OTP : ${otp}`,
+    subject: `Welcome ${newUser.name} to our site`,
+    text: `This Email to Welcome you on the site`,
     html
   });
 
@@ -62,11 +57,6 @@ export const login = catchAsync(async (req, res, next) => {
   const { email, password } = req.body;
 
   const user = await User.findOne({ email })
-    .populate({
-      path: "cart",
-      populate: "items"
-    })
-    .populate("cookieCart");
 
   if (!user) {
     logger.error(`Invalid Email or Password for user in login`, {
@@ -80,16 +70,6 @@ export const login = catchAsync(async (req, res, next) => {
       email
     });
     return next(new AppError(`Invalid email or password`, 404));
-  }
-
-  if (!user.isActive) {
-    logger.error(`Not Activated User , should Activate his account`, {
-      userId: user._id,
-      email: user.email,
-      name: user.name,
-      isActive: user.isActive
-    });
-    return next(new AppError("Please Active your account", 401));
   }
 
   const token = signToken({ id: user._id });

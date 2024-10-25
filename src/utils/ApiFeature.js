@@ -16,69 +16,6 @@ class ApiFeature {
 
     excludedFields.forEach((el) => delete filterObject[el]);
 
-    if (filterObject.category === "undefined") {
-      delete filterObject.category;
-    }
-
-    if (
-      filterObject.subCategory !== "undefined" &&
-      filterObject.subCategory !== ""
-    ) {
-      const subCategoriesIds = filterObject.subCategory.split(",");
-      filterObject = {
-        ...filterObject,
-        subCategory: { $in: subCategoriesIds },
-      };
-    } else {
-      delete filterObject.subCategory;
-    }
-
-    if (filterObject.size !== "undefined") {
-      filterObject = { ...filterObject, ["size.value"]: filterObject.size };
-      delete filterObject.size;
-    } else {
-      delete filterObject.size;
-    }
-
-    if (filterObject.colors !== "undefined") {
-      const colorsArray = filterObject.colors.split(",");
-      filterObject = {
-        ...filterObject,
-        colors: {
-          $elemMatch: {
-            value: {
-              $in: colorsArray,
-            },
-          },
-        },
-      };
-    } else {
-      delete filterObject.colors;
-    }
-
-    if (filterObject.min !== "undefined" && filterObject.max !== "undefined") {
-      filterObject = {
-        ...filterObject,
-        price: { $gte: filterObject.min, $lte: filterObject.max },
-      };
-      delete filterObject.max;
-
-      delete filterObject.min;
-    } else {
-      delete filterObject.max;
-
-      delete filterObject.min;
-    }
-
-    if (filterObject.sale === "true") {
-      filterObject.discount = { $gt: 0 };
-      delete filterObject.sale;
-    } else {
-      // filterObject.discount =0;
-      delete filterObject.sale;
-    }
-
-    console.log(filterObject);
     this.query = this.query.find(filterObject);
 
     return this;

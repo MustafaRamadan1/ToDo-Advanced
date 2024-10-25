@@ -1,0 +1,93 @@
+{
+  error: {
+    statusCode: 500,
+    status: 'error',
+    message: 'newUser.createOTP is not a function'
+  },
+  stack: undefined,
+  level: 'error',
+  message: 'Something went wrong',
+  timestamp: '2024-10-25T02:18:02.436Z'
+}
+{
+  stack: 'Error: Key email is Already exist in the Db\n' +
+    '    at duplicateKeyHandler (file:///D:/node-projects/ToDo-Advanced/src/middlewares/globalerrorHandler.js:13:10)\n' +
+    '    at globalErrorHandler (file:///D:/node-projects/ToDo-Advanced/src/middlewares/globalerrorHandler.js:68:37)\n' +
+    '    at Layer.handle_error (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\layer.js:71:5)\n' +
+    '    at trim_prefix (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:326:13)\n' +
+    '    at D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:286:9\n' +
+    '    at Function.process_params (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:646:15\n' +
+    '    at next (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:265:14)\n' +
+    '    at next (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\route.js:141:14)',
+  level: 'error',
+  message: 'Error: Key email is Already exist in the Db',
+  timestamp: '2024-10-25T02:24:29.638Z'
+}
+{
+  error: { statusCode: 500, status: 'error', message: 'otp is not defined' },
+  stack: undefined,
+  level: 'error',
+  message: 'Something went wrong',
+  timestamp: '2024-10-25T02:24:36.775Z'
+}
+{
+  stack: 'Error: Key email is Already exist in the Db\n' +
+    '    at duplicateKeyHandler (file:///D:/node-projects/ToDo-Advanced/src/middlewares/globalerrorHandler.js:13:10)\n' +
+    '    at globalErrorHandler (file:///D:/node-projects/ToDo-Advanced/src/middlewares/globalerrorHandler.js:68:37)\n' +
+    '    at Layer.handle_error (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\layer.js:71:5)\n' +
+    '    at trim_prefix (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:326:13)\n' +
+    '    at D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:286:9\n' +
+    '    at Function.process_params (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:646:15\n' +
+    '    at next (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:265:14)\n' +
+    '    at next (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\route.js:141:14)',
+  level: 'error',
+  message: 'Error: Key email is Already exist in the Db',
+  timestamp: '2024-10-25T02:27:13.679Z'
+}
+{
+  error: {
+    errno: -4058,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: 'D:\\node-projects\\ToDo-Advanced\\src\\views\\activateAccount.pug',
+    statusCode: 500,
+    status: 'error',
+    message: "ENOENT: no such file or directory, open 'D:\\node-projects\\ToDo-Advanced\\src\\views\\activateAccount.pug'"
+  },
+  stack: undefined,
+  level: 'error',
+  message: 'Something went wrong',
+  timestamp: '2024-10-25T02:27:22.641Z'
+}
+{
+  stack: 'Error: Key email is Already exist in the Db\n' +
+    '    at duplicateKeyHandler (file:///D:/node-projects/ToDo-Advanced/src/middlewares/globalerrorHandler.js:13:10)\n' +
+    '    at globalErrorHandler (file:///D:/node-projects/ToDo-Advanced/src/middlewares/globalerrorHandler.js:68:37)\n' +
+    '    at Layer.handle_error (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\layer.js:71:5)\n' +
+    '    at trim_prefix (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:326:13)\n' +
+    '    at D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:286:9\n' +
+    '    at Function.process_params (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:646:15\n' +
+    '    at next (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:265:14)\n' +
+    '    at next (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\route.js:141:14)',
+  level: 'error',
+  message: 'Error: Key email is Already exist in the Db',
+  timestamp: '2024-10-25T02:28:33.044Z'
+}
+{
+  token: '',
+  level: 'error',
+  message: 'No token in the header to make the user login ',
+  timestamp: '2024-10-25T02:29:43.716Z'
+}
+{
+  stack: undefined,
+  level: 'error',
+  message: 'Error: You are not logging in , Please Login ',
+  timestamp: '2024-10-25T02:29:43.725Z'
+}

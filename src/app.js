@@ -56,13 +56,6 @@ import logger from "./utils/logger.js";
 app.use("/api/v1", userRouter);
 
 
-import isAuth from "./middlewares/authentication.js";
-import restrictTo from "./middlewares/Authorization.js";
-import Category from "./Db/models/category.model.js";
-import Product from "./Db/models/product.model.js";
-import Order from "./Db/models/order.model.js";
-import User from "./Db/models/user.model.js";
-
 
 //  not found route for non exist routes
 

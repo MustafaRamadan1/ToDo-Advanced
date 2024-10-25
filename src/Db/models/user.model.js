@@ -1,9 +1,6 @@
-import crypto from "crypto";
 import mongoose from "mongoose";
 import validator from "validator";
 import bcrypt from "bcrypt";
-import generatorOTP from "../../utils/generateOTP.js";
-//  name , email, password, role , photo
 const userSchema = new mongoose.Schema(
   {
     name: {

@@ -16,7 +16,7 @@ router.post("/auth/login", login);
 router.patch(
   "/auth/updatePassword",
   isAuth,
-  Authorization("user"),
+  Authorization("employee"),
   updateUserPassword
 );
 

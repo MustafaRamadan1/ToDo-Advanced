@@ -1,0 +1,722 @@
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T02:15:04.417Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T02:15:04.443Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T02:15:06.651Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T02:15:06.665Z'
+}
+{
+  error: {
+    statusCode: 500,
+    status: 'error',
+    message: 'newUser.createOTP is not a function'
+  },
+  stack: undefined,
+  level: 'error',
+  message: 'Something went wrong',
+  timestamp: '2024-10-25T02:18:02.436Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/v1/auth/signup',
+      headers: {
+        'content-type': 'application/json',
+        'user-agent': 'PostmanRuntime/7.42.0',
+        accept: '*/*',
+        'postman-token': '27b94f8d-4760-4b38-ab69-18e56d0c6501',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-length': '140'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/v1/auth/signup',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 148
+  },
+  level: 'info',
+  message: 'POST /api/v1/auth/signup 500 148ms',
+  timestamp: '2024-10-25T02:18:02.450Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T02:18:25.575Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T02:18:25.626Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T02:18:38.554Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T02:18:38.564Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T02:18:46.025Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T02:18:46.038Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T02:18:48.829Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T02:18:48.848Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T02:18:55.136Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T02:18:55.152Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T02:19:00.013Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T02:19:00.045Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T02:19:04.964Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T02:19:04.980Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T02:19:08.792Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T02:19:08.811Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T02:19:15.529Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T02:19:15.548Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T02:19:41.266Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T02:19:41.275Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T02:19:47.764Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T02:19:47.780Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/v1/auth/signup',
+      headers: {
+        'content-type': 'application/json',
+        'user-agent': 'PostmanRuntime/7.42.0',
+        accept: '*/*',
+        'postman-token': '49d3e1ab-d044-4115-93b2-d4643141baaf',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-length': '140'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/v1/auth/signup',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 128
+  },
+  level: 'info',
+  message: 'POST /api/v1/auth/signup 500 128ms',
+  timestamp: '2024-10-25T02:19:56.804Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/v1/auth/login',
+      headers: {
+        'content-type': 'application/json',
+        'user-agent': 'PostmanRuntime/7.42.0',
+        accept: '*/*',
+        'postman-token': '4030e2e7-499c-4a51-8d11-831229fa56ea',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-length': '91'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/v1/auth/login',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 33
+  },
+  level: 'info',
+  message: 'POST /api/v1/auth/login 500 33ms',
+  timestamp: '2024-10-25T02:20:14.259Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T02:20:34.190Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T02:20:34.211Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T02:20:38.210Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T02:20:38.230Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T02:20:47.848Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T02:20:47.859Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T02:21:21.761Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T02:21:21.774Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T02:21:24.185Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T02:21:24.201Z'
+}
+{
+  userId: new ObjectId('671affda846bf54f5d58176b'),
+  email: 'mustafa.ramadan165@gmail.com',
+  name: 'Employee1',
+  isActive: false,
+  level: 'info',
+  message: 'User Authenticated Success',
+  timestamp: '2024-10-25T02:21:34.943Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/v1/auth/login',
+      headers: {
+        'content-type': 'application/json',
+        'user-agent': 'PostmanRuntime/7.42.0',
+        accept: '*/*',
+        'postman-token': '4958babc-e210-4cd8-88b9-cd58cb9ced23',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-length': '91'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/v1/auth/login',
+      query: {}
+    },
+    res: { statusCode: 200 },
+    responseTime: 118
+  },
+  level: 'info',
+  message: 'POST /api/v1/auth/login 200 118ms',
+  timestamp: '2024-10-25T02:21:34.951Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T02:23:37.133Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T02:23:37.147Z'
+}
+{
+  stack: 'Error: Key email is Already exist in the Db\n' +
+    '    at duplicateKeyHandler (file:///D:/node-projects/ToDo-Advanced/src/middlewares/globalerrorHandler.js:13:10)\n' +
+    '    at globalErrorHandler (file:///D:/node-projects/ToDo-Advanced/src/middlewares/globalerrorHandler.js:68:37)\n' +
+    '    at Layer.handle_error (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\layer.js:71:5)\n' +
+    '    at trim_prefix (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:326:13)\n' +
+    '    at D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:286:9\n' +
+    '    at Function.process_params (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:646:15\n' +
+    '    at next (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:265:14)\n' +
+    '    at next (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\route.js:141:14)',
+  level: 'error',
+  message: 'Error: Key email is Already exist in the Db',
+  timestamp: '2024-10-25T02:24:29.638Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/v1/auth/signup',
+      headers: {
+        'content-type': 'application/json',
+        'user-agent': 'PostmanRuntime/7.42.0',
+        accept: '*/*',
+        'postman-token': '32487e80-68d3-4d5a-b9bd-40425c84cf4d',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-length': '140'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/v1/auth/signup',
+      query: {}
+    },
+    res: { statusCode: 422 },
+    responseTime: 134
+  },
+  level: 'info',
+  message: 'POST /api/v1/auth/signup 422 134ms',
+  timestamp: '2024-10-25T02:24:29.646Z'
+}
+{
+  error: { statusCode: 500, status: 'error', message: 'otp is not defined' },
+  stack: undefined,
+  level: 'error',
+  message: 'Something went wrong',
+  timestamp: '2024-10-25T02:24:36.775Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/v1/auth/signup',
+      headers: {
+        'content-type': 'application/json',
+        'user-agent': 'PostmanRuntime/7.42.0',
+        accept: '*/*',
+        'postman-token': '74e0b16d-c6ee-4459-8e20-7f149f89b0db',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-length': '142'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/v1/auth/signup',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 86
+  },
+  level: 'info',
+  message: 'POST /api/v1/auth/signup 500 86ms',
+  timestamp: '2024-10-25T02:24:36.779Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T02:24:59.662Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T02:24:59.677Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T02:25:39.225Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T02:25:39.237Z'
+}
+{
+  stack: 'Error: Key email is Already exist in the Db\n' +
+    '    at duplicateKeyHandler (file:///D:/node-projects/ToDo-Advanced/src/middlewares/globalerrorHandler.js:13:10)\n' +
+    '    at globalErrorHandler (file:///D:/node-projects/ToDo-Advanced/src/middlewares/globalerrorHandler.js:68:37)\n' +
+    '    at Layer.handle_error (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\layer.js:71:5)\n' +
+    '    at trim_prefix (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:326:13)\n' +
+    '    at D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:286:9\n' +
+    '    at Function.process_params (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:646:15\n' +
+    '    at next (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:265:14)\n' +
+    '    at next (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\route.js:141:14)',
+  level: 'error',
+  message: 'Error: Key email is Already exist in the Db',
+  timestamp: '2024-10-25T02:27:13.679Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/v1/auth/signup',
+      headers: {
+        'content-type': 'application/json',
+        'user-agent': 'PostmanRuntime/7.42.0',
+        accept: '*/*',
+        'postman-token': 'b82c26f6-d0e3-4962-a7a8-360eed879c6d',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-length': '142'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/v1/auth/signup',
+      query: {}
+    },
+    res: { statusCode: 422 },
+    responseTime: 121
+  },
+  level: 'info',
+  message: 'POST /api/v1/auth/signup 422 121ms',
+  timestamp: '2024-10-25T02:27:13.691Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T02:27:19.780Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T02:27:19.795Z'
+}
+{
+  error: {
+    errno: -4058,
+    code: 'ENOENT',
+    syscall: 'open',
+    path: 'D:\\node-projects\\ToDo-Advanced\\src\\views\\activateAccount.pug',
+    statusCode: 500,
+    status: 'error',
+    message: "ENOENT: no such file or directory, open 'D:\\node-projects\\ToDo-Advanced\\src\\views\\activateAccount.pug'"
+  },
+  stack: undefined,
+  level: 'error',
+  message: 'Something went wrong',
+  timestamp: '2024-10-25T02:27:22.641Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/v1/auth/signup',
+      headers: {
+        'content-type': 'application/json',
+        'user-agent': 'PostmanRuntime/7.42.0',
+        accept: '*/*',
+        'postman-token': 'f9411eeb-93f5-449c-af53-723f2e793d56',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-length': '142'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/v1/auth/signup',
+      query: {}
+    },
+    res: { statusCode: 500 },
+    responseTime: 109
+  },
+  level: 'info',
+  message: 'POST /api/v1/auth/signup 500 109ms',
+  timestamp: '2024-10-25T02:27:22.649Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T02:28:12.600Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T02:28:12.606Z'
+}
+{
+  stack: 'Error: Key email is Already exist in the Db\n' +
+    '    at duplicateKeyHandler (file:///D:/node-projects/ToDo-Advanced/src/middlewares/globalerrorHandler.js:13:10)\n' +
+    '    at globalErrorHandler (file:///D:/node-projects/ToDo-Advanced/src/middlewares/globalerrorHandler.js:68:37)\n' +
+    '    at Layer.handle_error (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\layer.js:71:5)\n' +
+    '    at trim_prefix (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:326:13)\n' +
+    '    at D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:286:9\n' +
+    '    at Function.process_params (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:346:12)\n' +
+    '    at next (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:280:10)\n' +
+    '    at D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:646:15\n' +
+    '    at next (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\index.js:265:14)\n' +
+    '    at next (D:\\node-projects\\ToDo-Advanced\\node_modules\\express\\lib\\router\\route.js:141:14)',
+  level: 'error',
+  message: 'Error: Key email is Already exist in the Db',
+  timestamp: '2024-10-25T02:28:33.044Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/v1/auth/signup',
+      headers: {
+        'content-type': 'application/json',
+        'user-agent': 'PostmanRuntime/7.42.0',
+        accept: '*/*',
+        'postman-token': 'f4324e59-9d99-4e8d-8b53-f04a97b3c9c1',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-length': '142'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/v1/auth/signup',
+      query: {}
+    },
+    res: { statusCode: 422 },
+    responseTime: 171
+  },
+  level: 'info',
+  message: 'POST /api/v1/auth/signup 422 171ms',
+  timestamp: '2024-10-25T02:28:33.056Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T02:28:58.710Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-25T02:28:58.725Z'
+}
+{
+  message: 'Email Sent to mustafa.ramadan16597@gmail.com',
+  level: 'info',
+  timestamp: '2024-10-25T02:29:04.278Z'
+}
+{
+  userId: new ObjectId('671b026e2be8c20a1e48a0d2'),
+  name: 'Employee1',
+  email: 'mustafa.ramadan16597@gmail.com',
+  level: 'info',
+  message: 'Created the user and send OTP to the email',
+  timestamp: '2024-10-25T02:29:04.291Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/v1/auth/signup',
+      headers: {
+        'content-type': 'application/json',
+        'user-agent': 'PostmanRuntime/7.42.0',
+        accept: '*/*',
+        'postman-token': '5641ae4d-2294-41b0-b31d-08048bda82d1',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-length': '142'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/v1/auth/signup',
+      query: {}
+    },
+    res: { statusCode: 200 },
+    responseTime: 2151
+  },
+  level: 'info',
+  message: 'POST /api/v1/auth/signup 200 2151ms',
+  timestamp: '2024-10-25T02:29:04.305Z'
+}
+{
+  token: '',
+  level: 'error',
+  message: 'No token in the header to make the user login ',
+  timestamp: '2024-10-25T02:29:43.716Z'
+}
+{
+  stack: undefined,
+  level: 'error',
+  message: 'Error: You are not logging in , Please Login ',
+  timestamp: '2024-10-25T02:29:43.725Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/v1/test',
+      headers: {
+        'user-agent': 'PostmanRuntime/7.42.0',
+        accept: '*/*',
+        'postman-token': '592d0a51-b7ce-4fef-aa10-eb2bab7b5f28',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/api/v1/test',
+      query: {}
+    },
+    res: { statusCode: 401 },
+    responseTime: 13
+  },
+  level: 'info',
+  message: 'GET /api/v1/test 401 13ms',
+  timestamp: '2024-10-25T02:29:43.729Z'
+}
+{
+  message: 'Email Sent to mustafa.ramadan16597@gmail.com',
+  level: 'info',
+  timestamp: '2024-10-25T02:30:16.259Z'
+}
+{
+  userId: new ObjectId('671b02b62be8c20a1e48a0d4'),
+  name: 'Employee1',
+  email: 'mustafa.ramadan16597@gmail.com',
+  level: 'info',
+  message: 'Created the user and send OTP to the email',
+  timestamp: '2024-10-25T02:30:16.268Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/v1/auth/signup',
+      headers: {
+        'content-type': 'application/json',
+        'user-agent': 'PostmanRuntime/7.42.0',
+        accept: '*/*',
+        'postman-token': 'd9ef4bf7-3e52-44e3-82ad-ca86b2e9773d',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-length': '142'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/v1/auth/signup',
+      query: {}
+    },
+    res: { statusCode: 200 },
+    responseTime: 2047
+  },
+  level: 'info',
+  message: 'POST /api/v1/auth/signup 200 2047ms',
+  timestamp: '2024-10-25T02:30:16.274Z'
+}
+{
+  message: 'User Authenticated Successfully',
+  level: 'info',
+  timestamp: '2024-10-25T02:30:31.982Z'
+}
+{
+  userId: new ObjectId('671b02b62be8c20a1e48a0d4'),
+  url: '/api/v1/test',
+  level: 'info',
+  message: 'User Authorized to access the route ',
+  timestamp: '2024-10-25T02:30:31.983Z'
+}
+{
+  userId: new ObjectId('671b02b62be8c20a1e48a0d4'),
+  role: undefined,
+  level: 'info',
+  message: 'Get All User Route Accessed by following account',
+  timestamp: '2024-10-25T02:30:32.215Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/v1/test',
+      headers: {
+        authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MWIwMmI2MmJlOGMyMGExZTQ4YTBkNCIsImlhdCI6MTcyOTgyMzQxNiwiZXhwIjoxNzMwMDgyNjE2fQ.W8GIqPeV0hMzJeMrK1khKWh13tjSuPYvEy3dVbYH5uM',
+        'user-agent': 'PostmanRuntime/7.42.0',
+        accept: '*/*',
+        'postman-token': '673056ff-3818-44ba-9ace-0b475aa5ca4e',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive'
+      },
+      method: 'GET',
+      httpVersion: '1.1',
+      originalUrl: '/api/v1/test',
+      query: {}
+    },
+    res: { statusCode: 200 },
+    responseTime: 387
+  },
+  level: 'info',
+  message: 'GET /api/v1/test 200 387ms',
+  timestamp: '2024-10-25T02:30:32.219Z'
+}
