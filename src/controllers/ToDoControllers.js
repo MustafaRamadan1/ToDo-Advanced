@@ -78,6 +78,28 @@ export const getToDoById = catchAsync(async(req,res,next)=>{
 })
 
 
+
+export const getUserToDos = catchAsync(async(req,res,next)=>{
+
+  const {userId} = req.params;
+
+  const userToDos = await ToDo.find({assignedTo:{$in:[userId]}}).populate('assignedTo');
+
+  
+  if(userToDos.length === 0){
+    return next(new AppError('No documents found',404));
+}
+
+
+res.status(200).json({
+  status:'success',
+  data:userToDos
+})
+
+
+})
+
+
 export const deleteToDo = catchAsync(async (req, res, next)=>{
 
   const {id} = req.params;
