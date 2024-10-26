@@ -180,3 +180,24 @@ export const deleteToDo = catchAsync(async (req, res, next) => {
   });
 });
 
+
+
+
+export const updateToDoByEmployee  = catchAsync(async (req, res, next) => {
+  
+  const {id} = req.params;
+  const {state} = req.body;
+
+  const updatedToDo = await ToDo.findByIdAndUpdate(id,{state},{
+    new: true,
+    runValidators: true
+  }).populate('assignedTo');
+
+  if(!updatedToDo) return next(new AppError(`No To Do found with this id ${id}`, 404));
+
+
+  res.status(200).json({
+    status: "success",
+    data: updatedToDo
+  })
+})

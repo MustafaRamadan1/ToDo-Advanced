@@ -1,18 +1,5 @@
 import mongoose from "mongoose";
 
-/*
-
-description (String): Detailed description of the task, including any necessary instructions.
-assignedTo (Array of ObjectId): List of employees assigned to the task (in case of multiple assignees).
-dueDate (Date): Deadline for task completion.
-priority (String, enum: ["low", "medium", "high"]): Priority level of the task.
-status (String, enum: ["pending", "in-progress", "completed", "overdue"]): Current status of the task.
-photo (String or Array of Strings): URLs or paths to images related to the task, allowing multiple photos if needed.
-tags (Array of Strings): Tags or labels to categorize tasks for easier searching/filtering.
-completedAt (Date, optional): Timestamp when the task is marked as completed.
-
-*/
-
 const toDoSchema = new mongoose.Schema(
   {
     title: {
