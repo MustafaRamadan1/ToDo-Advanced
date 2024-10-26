@@ -33,10 +33,9 @@ const resizeProductImg = catchAsync(async (req, res, next) => {
 
     return next();
   } else {
-    if (req.params.id && req.method === "PUT") {
+    if (req.params.id && req.method === "PUT" && !req.file) {
       return next();
-    } else if (!req.file)
-      return next(new AppError(`Please Provide Image for the task`, 400));
+    } 
   }
     next();
   });

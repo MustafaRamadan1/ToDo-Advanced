@@ -16,7 +16,8 @@ const toDoSchema = new mongoose.Schema(
     },
     assignedTo: {
       type: [mongoose.Schema.Types.ObjectId],
-      ref: "User"
+      ref: "User",
+      required:[true,'ToDo Should be assigned to a user']
     },
     priority: {
       type: String,
