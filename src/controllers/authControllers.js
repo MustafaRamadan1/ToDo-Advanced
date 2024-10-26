@@ -12,19 +12,19 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 export const signUp = catchAsync(async (req, res, next) => {
-  const { name, email, password,role } = req.body;
+  const { name, email, password, role } = req.body;
 
   const newUser = await User.create({
     name: name.split(" ")[0],
     email,
     password,
-    role
+    role,
   });
 
   if (!newUser) {
     logger.error(`Couldn't Create new user`, {
       name,
-      email
+      email,
     });
     return next(new AppError(`Couldn't create new User`, 400));
   }
@@ -37,38 +37,38 @@ export const signUp = catchAsync(async (req, res, next) => {
     to: newUser.email,
     subject: `Welcome ${newUser.name} to our site`,
     text: `This Email to Welcome you on the site`,
-    html
+    html,
   });
 
   const token = signToken({ id: newUser._id });
   logger.info(`Created the user and send OTP to the email`, {
     userId: newUser._id,
     name: newUser.name,
-    email: newUser.email
+    email: newUser.email,
   });
 
   res.status(200).json({
     status: "success",
     token,
-    data: newUser
+    data: newUser,
   });
 });
 
 export const login = catchAsync(async (req, res, next) => {
   const { email, password } = req.body;
 
-  const user = await User.findOne({ email })
+  const user = await User.findOne({ email });
 
   if (!user) {
     logger.error(`Invalid Email or Password for user in login`, {
-      email
+      email,
     });
     return next(new AppError(`Invalid email or password`, 404));
   }
 
   if (!(await user.CheckPassword(password))) {
     logger.error(`Invalid Email or Password for user in login`, {
-      email
+      email,
     });
     return next(new AppError(`Invalid email or password`, 404));
   }
@@ -79,22 +79,23 @@ export const login = catchAsync(async (req, res, next) => {
     userId: user._id,
     email: user.email,
     name: user.name,
-    isActive: user.isActive
+    isActive: user.isActive,
   });
 
   res.status(200).json({
     status: "success",
     token,
-    data: user
+    data: user,
   });
 });
 
-export const getAllUsers = catchAsync(async (req, res, next) => {
+export const getAllEmployees = catchAsync(async (req, res, next) => {
   const limit = req.query.limit * 1 || 5;
 
   const totalDocumentCounts = await User.countDocuments();
 
-  const apiFeature = new ApiFeature(User.find(), req.query)
+  const apiFeature = new ApiFeature(User.find({ role: "employee" }), req.query)
+    .filter()
     .sort()
     .limitFields()
     .pagination();
@@ -103,14 +104,14 @@ export const getAllUsers = catchAsync(async (req, res, next) => {
 
   logger.info(`Get All User Route Accessed by following account`, {
     userId: req.user._id,
-    role: req.user._role
+    role: req.user._role,
   });
 
   res.status(200).json({
     status: "success",
     result: _getAllUsers.length,
     numPages: Math.ceil(totalDocumentCounts / limit),
-    data: _getAllUsers
+    data: _getAllUsers,
   });
 });
 
@@ -126,7 +127,7 @@ export const updateUserPassword = catchAsync(async (req, res, next) => {
 
   if (!(await user.CheckPassword(oldPassword))) {
     logger.error(`Invalid Password`, {
-      userId: req.user._id
+      userId: req.user._id,
     });
     return next(new AppError(` Invalid Password`, 400));
   }
@@ -137,13 +138,13 @@ export const updateUserPassword = catchAsync(async (req, res, next) => {
   logger.info(
     `Update Password for the user after received the old Password and he's authenticated`,
     {
-      userId: req.user._id
+      userId: req.user._id,
     }
   );
 
   res.status(200).json({
     status: "success",
-    message: "Password Changed Successfully"
+    message: "Password Changed Successfully",
   });
 });
 
@@ -157,8 +158,6 @@ export const getUserById = catchAsync(async (req, res, next) => {
   }
   res.status(200).json({
     status: "success",
-    data: user
+    data: user,
   });
 });
-
-

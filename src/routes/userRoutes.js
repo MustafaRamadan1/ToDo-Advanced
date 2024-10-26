@@ -1,10 +1,10 @@
 import { Router } from "express";
 import {
-  getAllUsers,
   login,
   signUp,
   updateUserPassword,
   getUserById,
+  getAllEmployees,
 } from "../controllers/authControllers.js";
 import isAuth from "../middlewares/authentication.js";
 import Authorization from "../middlewares/Authorization.js";
@@ -20,9 +20,7 @@ router.patch(
   updateUserPassword
 );
 
-router.get("/test", isAuth, Authorization("employee"), getAllUsers);
-
-router.get("/employees", isAuth, Authorization("leader"), getAllUsers);
+router.get("/employees", isAuth, Authorization("leader"), getAllEmployees);
 router.get('/employees/:id', isAuth,Authorization('leader'), getUserById);
 
 export default router;
