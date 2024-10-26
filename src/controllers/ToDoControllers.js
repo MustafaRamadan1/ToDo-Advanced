@@ -164,10 +164,15 @@ let userToDos = await ToDo.find(queryObj).populate("assignedTo").sort(req.query.
 export const deleteToDo = catchAsync(async (req, res, next) => {
   const { id } = req.params;
 
-  const deletedToDo = await ToDo.findById(id).populate("assignedTo");
+  const targetedToDo = await ToDo.findById(id);
 
-  if (!deletedToDo)
+
+  if(targetedToDo){
+    await ToDo.deleteOne({_id:id})
+  }
+  else {
     return next(new AppError(`No To Do found with this id ${id}`, 404));
+  }
 
   res.status(204).json({
     status: "success",
@@ -175,20 +180,3 @@ export const deleteToDo = catchAsync(async (req, res, next) => {
   });
 });
 
-export const getFilteredToDos = catchAsync(async (req, res, next) => {
-  const { pattern } = req.params;
-
-  const toDos = await ToDo.find({
-    title: { $regex: pattern, $options: "i" },
-  }).populate("assignedTo");
-
-  if (toDos.length === 0) {
-    return next(new AppError(`No To Do found with this id ${id}`, 404));
-  }
-
-  res.status(200).json({
-    status: "success",
-    result: toDos.length,
-    data: toDos,
-  });
-});

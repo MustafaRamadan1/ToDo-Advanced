@@ -3,7 +3,7 @@ import isAuth from '../middlewares/authentication.js';
 import Authorization from '../middlewares/Authorization.js';
 import uploadImages from '../middlewares/uploadImages.js';
 import resizeProductImg from '../utils/resizeProductsImage.js';
-import { createToDo, getAllToDos, getToDoById,deleteToDo, getUserToDos,getFilteredToDos} from '../controllers/ToDoControllers.js';
+import { createToDo, getAllToDos, getToDoById,deleteToDo, getUserToDos} from '../controllers/ToDoControllers.js';
 
 const ToDoRouter = express.Router();
 
@@ -13,7 +13,6 @@ ToDoRouter.post('/',uploadImages.single('image'), resizeProductImg, isAuth, Auth
 ToDoRouter.get('/',isAuth, Authorization('leader'), getAllToDos)
 ToDoRouter.get('/:id', isAuth, Authorization('leader', 'employee'),getToDoById);
 ToDoRouter.get('/users/:userId', isAuth, Authorization('leader', 'employee'), getUserToDos);
-ToDoRouter.get('/filters/:pattern',getFilteredToDos)
 ToDoRouter.delete('/:id', isAuth, Authorization('leader'), deleteToDo);
 
 
