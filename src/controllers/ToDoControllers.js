@@ -1,9 +1,12 @@
 import AppError from "../utils/AppError.js";
 import { catchAsync } from "../utils/catchAsync.js";
 import ToDo from "../Db/models/toDo.model.js";
-import { deletePhotoFromServer, uploadToCloudinary } from "../utils/uploadImgHelperFunc.js";
+import {
+  deletePhotoFromServer,
+  uploadToCloudinary,
+} from "../utils/uploadImgHelperFunc.js";
 import { cloudinaryDeleteImg } from "../utils/cloudinary.js";
-import ApiFeature from '../utils/ApiFeature.js';
+import ApiFeature from "../utils/ApiFeature.js";
 
 export const createToDo = catchAsync(async (req, res, next) => {
   const { title, description, assignedTo, priority, state } = req.body;
@@ -36,81 +39,75 @@ export const createToDo = catchAsync(async (req, res, next) => {
   });
 });
 
+export const getAllToDos = catchAsync(async (req, res, next) => {
+  const documentsNumber = await ToDo.countDocuments();
+  const apiFeature = new ApiFeature(ToDo.find(), req.query)
+    .filter()
+    .sort()
+    .pagination(documentsNumber);
 
+  const allToDos = await apiFeature.query.populate("assignedTo");
 
-export const getAllToDos = catchAsync(async (req,res,next)=>{
-    const documentsNumber = await ToDo.countDocuments();
-    const apiFeature = new ApiFeature(ToDo.find(),req.query).filter().sort().pagination(documentsNumber);
+  if (allToDos.length === 0) {
+    return next(new AppError("No documents found", 404));
+  }
 
+  res.status(200).json({
+    status: "success",
+    result: allToDos.length,
+    data: allToDos,
+  });
+});
 
-    const allToDos = await apiFeature.query.populate('assignedTo')
+export const getToDoById = catchAsync(async (req, res, next) => {
+  const { id } = req.params;
 
+  const currentToDo = await ToDo.findById(id).populate("assignedTo");
 
-    if(allToDos.length === 0){
-        return next(new AppError('No documents found',404));
-    }
+  if (!currentToDo)
+    return next(new AppError(`No To Do found with this id ${id}`, 404));
 
+  res.status(200).json({
+    status: "success",
+    data: currentToDo,
+  });
+});
 
+export const getUserToDos = catchAsync(async (req, res, next) => {
+  const { userId } = req.params;
 
-    res.status(200).json({
-        status:'success',
-        result:allToDos.length,
-        data:allToDos
-    })
-})
+  const documentsNumber = (await ToDo.find({ assignedTo: { $in: [userId] } })).length;
 
+  const apiFeature = new ApiFeature(ToDo.find({assignedTo: { $in: [userId] }}), req.query)
+  .filter()
+  .sort()
+  .pagination(documentsNumber);
 
+  const userToDos = await apiFeature.query.populate(
+    "assignedTo"
+  );
 
-export const getToDoById = catchAsync(async(req,res,next)=>{
+  if (userToDos.length === 0) {
+    return next(new AppError("No documents found", 404));
+  }
 
+  res.status(200).json({
+    status: "success",
+    result: userToDos.length,
+    data: userToDos,
+  });
+});
 
-    const {id} = req.params;
+export const deleteToDo = catchAsync(async (req, res, next) => {
+  const { id } = req.params;
 
-    const currentToDo = await ToDo.findById(id).populate('assignedTo');
+  const deletedToDo = await ToDo.findById(id).populate("assignedTo");
 
-    if(!currentToDo) return next(new AppError(`No To Do found with this id ${id}`,404));
-
-
-    res.status(200).json({
-        status:'success',
-        data:currentToDo
-    })
-})
-
-
-
-export const getUserToDos = catchAsync(async(req,res,next)=>{
-
-  const {userId} = req.params;
-
-  const userToDos = await ToDo.find({assignedTo:{$in:[userId]}}).populate('assignedTo');
-
-  
-  if(userToDos.length === 0){
-    return next(new AppError('No documents found',404));
-}
-
-
-res.status(200).json({
-  status:'success',
-  data:userToDos
-})
-
-
-})
-
-
-export const deleteToDo = catchAsync(async (req, res, next)=>{
-
-  const {id} = req.params;
-
-  const deletedToDo = await ToDo.findById(id).populate('assignedTo');
-
-  if(!deletedToDo) return next(new AppError(`No To Do found with this id ${id}`,404));
-
+  if (!deletedToDo)
+    return next(new AppError(`No To Do found with this id ${id}`, 404));
 
   res.status(204).json({
-    status:'success',
-    message:`To Do with id ${id} has been deleted successfully`
-  })
-})
+    status: "success",
+    message: `To Do with id ${id} has been deleted successfully`,
+  });
+});
