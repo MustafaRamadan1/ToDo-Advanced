@@ -78,24 +78,7 @@ else {
 
 
 
-
-// Pagination
-
-const page = req.query.page * 1 || 1;
-const limit = req.query.limit * 1 || 2;
-const skip = (page - 1) * limit;
-
-const documentsCount = (await ToDo.find(queryObj).sort(req.query.sort)).length;
-
-let allToDos =  ToDo.find(queryObj).populate("assignedTo").sort(req.query.sort)
-
-
-if(skip > documentsCount){
-  allToDos = [];
-}
-
- allToDos = await ToDo.find(queryObj).populate("assignedTo").sort(req.query.sort).skip(skip).limit(limit);
-
+let allToDos =  await ToDo.find(queryObj).populate("assignedTo").sort(req.query.sort)
 
 
   if (allToDos.length === 0) {
@@ -164,23 +147,7 @@ else {
 
 
 
-// Pagination
-
-const page = req.query.page * 1 || 1;
-const limit = req.query.limit * 1 || 4;
-const skip = (page - 1) * limit;
-
-const documentsCount = (await ToDo.find(queryObj).sort(req.query.sort)).length;
-
-
-
-if(skip > documentsCount){
-  userToDos = [];
-}
-
-let userToDos = await ToDo.find(queryObj).populate("assignedTo").sort(req.query.sort).skip(skip).limit(limit);
-
-
+let userToDos = await ToDo.find(queryObj).populate("assignedTo").sort(req.query.sort);
 
 
   if (userToDos.length === 0) {
