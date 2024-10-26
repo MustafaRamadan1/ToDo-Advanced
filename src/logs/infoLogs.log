@@ -1235,3 +1235,62 @@
   message: 'POST /api/v1/toDos/ 201 3282ms',
   timestamp: '2024-10-25T14:29:02.710Z'
 }
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-26T10:53:28.344Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-26T10:53:28.371Z'
+}
+{
+  message: 'Email Sent to leader11111@gmail.com',
+  level: 'info',
+  timestamp: '2024-10-26T10:55:18.703Z'
+}
+{
+  userId: new ObjectId('671cca90a94df112dee2671a'),
+  name: 'leader',
+  email: 'leader11111@gmail.com',
+  level: 'info',
+  message: 'Created the user and send OTP to the email',
+  timestamp: '2024-10-26T10:55:19.307Z'
+}
+{
+  meta: {
+    req: {
+      url: '/api/v1/auth/signup',
+      headers: {
+        'content-type': 'application/json',
+        'user-agent': 'PostmanRuntime/7.42.0',
+        accept: '*/*',
+        'postman-token': '5f1cd5a7-3df2-41dc-8d76-b9ab1155c1de',
+        host: 'localhost:8000',
+        'accept-encoding': 'gzip, deflate, br',
+        connection: 'keep-alive',
+        'content-length': '134'
+      },
+      method: 'POST',
+      httpVersion: '1.1',
+      originalUrl: '/api/v1/auth/signup',
+      query: {}
+    },
+    res: { statusCode: 200 },
+    responseTime: 7310
+  },
+  level: 'info',
+  message: 'POST /api/v1/auth/signup 200 7310ms',
+  timestamp: '2024-10-26T10:55:19.351Z'
+}
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-26T10:56:14.708Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-26T10:56:14.727Z'
+}

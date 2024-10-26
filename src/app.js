@@ -2,7 +2,7 @@ import morgan from "morgan";
 import express from "express";
 import helmet from "helmet";
 import mongoSanitize from "express-mongo-sanitize";
-
+import cors from 'cors'
 import xss from "xss-clean";
 import expressWinston from "express-winston";
 import { catchAsync } from "./utils/catchAsync.js";
@@ -31,7 +31,7 @@ app.use(morgan("dev"));
 app.use(mongoSanitize());
 app.use(helmet());
 app.use(xss());
-
+app.use(cors())
 
 app.use(
   expressWinston.logger({
