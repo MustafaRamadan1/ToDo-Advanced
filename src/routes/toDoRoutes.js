@@ -14,7 +14,7 @@ ToDoRouter.get('/',isAuth, Authorization('leader'), getAllToDos)
 ToDoRouter.get('/:id', isAuth, Authorization('leader', 'employee'),getToDoById);
 ToDoRouter.get('/users/:userId', isAuth, Authorization('leader', 'employee'), getUserToDos);
 ToDoRouter.delete('/:id', isAuth, Authorization('leader'), deleteToDo);
-ToDoRouter.patch('/:id/employee', isAuth,  updateToDoByEmployee)
+ToDoRouter.patch('/:id/employee', isAuth, Authorization('employee'), updateToDoByEmployee)
 
 
 
