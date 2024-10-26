@@ -40,18 +40,67 @@ export const createToDo = catchAsync(async (req, res, next) => {
 });
 
 export const getAllToDos = catchAsync(async (req, res, next) => {
-  const documentsNumber = await ToDo.countDocuments();
-  const apiFeature = new ApiFeature(ToDo.find(), req.query)
-    .filter()
-    .sort()
-    .pagination(documentsNumber);
 
-  const allToDos = await apiFeature.query.populate("assignedTo");
+  const { priority, state, title } = req.query;
 
-  if (allToDos.length === 0) {
-    return next(new AppError("No documents found", 404));
+  const queryObj = {
+  };
+
+  if (title) {
+    const regex = new RegExp(
+      title
+        .split("")
+        .map((title) => `(?=.*${title})`)
+        .join(""),
+      "i"
+    );
+
+    queryObj.title = regex;
   }
 
+  if (priority) {
+    queryObj.priority = priority;
+  }
+
+  if (state) {
+    queryObj.state = state;
+  }
+
+
+// sort 
+if(req.query.sort){
+
+  req.query.sort = req.query.sort.split(",").join(" ");
+}
+else {
+  req.query.sort = '-createdAt';
+}
+
+
+
+
+// Pagination
+
+const page = req.query.page * 1 || 1;
+const limit = req.query.limit * 1 || 2;
+const skip = (page - 1) * limit;
+
+const documentsCount = (await ToDo.find(queryObj).sort(req.query.sort)).length;
+
+let allToDos =  ToDo.find(queryObj).populate("assignedTo").sort(req.query.sort)
+
+
+if(skip > documentsCount){
+  allToDos = [];
+}
+
+ allToDos = await ToDo.find(queryObj).populate("assignedTo").sort(req.query.sort).skip(skip).limit(limit);
+
+
+
+  if (allToDos.length === 0) {
+    allToDos = [];
+  }
   res.status(200).json({
     status: "success",
     result: allToDos.length,
@@ -76,19 +125,66 @@ export const getToDoById = catchAsync(async (req, res, next) => {
 export const getUserToDos = catchAsync(async (req, res, next) => {
   const { userId } = req.params;
 
-  const documentsNumber = (await ToDo.find({ assignedTo: { $in: [userId] } })).length;
+  const { priority, state, title } = req.query;
 
-  const apiFeature = new ApiFeature(ToDo.find({assignedTo: { $in: [userId] }}), req.query)
-  .filter()
-  .sort()
-  .pagination(documentsNumber);
+  const queryObj = {
+    assignedTo: { $in: [userId] },
+  };
 
-  const userToDos = await apiFeature.query.populate(
-    "assignedTo"
-  );
+  if (title) {
+    const regex = new RegExp(
+      title
+        .split("")
+        .map((title) => `(?=.*${title})`)
+        .join(""),
+      "i"
+    );
+
+    queryObj.title = regex;
+  }
+
+  if (priority) {
+    queryObj.priority = priority;
+  }
+
+  if (state) {
+    queryObj.state = state;
+  }
+
+
+// sort 
+if(req.query.sort){
+
+  req.query.sort = req.query.sort.split(",").join(" ");
+}
+else {
+  req.query.sort = '-createdAt';
+}
+
+
+
+
+// Pagination
+
+const page = req.query.page * 1 || 1;
+const limit = req.query.limit * 1 || 4;
+const skip = (page - 1) * limit;
+
+const documentsCount = (await ToDo.find(queryObj).sort(req.query.sort)).length;
+
+
+
+if(skip > documentsCount){
+  userToDos = [];
+}
+
+let userToDos = await ToDo.find(queryObj).populate("assignedTo").sort(req.query.sort).skip(skip).limit(limit);
+
+
+
 
   if (userToDos.length === 0) {
-    return next(new AppError("No documents found", 404));
+    userToDos = [];
   }
 
   res.status(200).json({
@@ -109,5 +205,23 @@ export const deleteToDo = catchAsync(async (req, res, next) => {
   res.status(204).json({
     status: "success",
     message: `To Do with id ${id} has been deleted successfully`,
+  });
+});
+
+export const getFilteredToDos = catchAsync(async (req, res, next) => {
+  const { pattern } = req.params;
+
+  const toDos = await ToDo.find({
+    title: { $regex: pattern, $options: "i" },
+  }).populate("assignedTo");
+
+  if (toDos.length === 0) {
+    return next(new AppError(`No To Do found with this id ${id}`, 404));
+  }
+
+  res.status(200).json({
+    status: "success",
+    result: toDos.length,
+    data: toDos,
   });
 });
