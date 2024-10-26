@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
 
-
 /*
 
 description (String): Detailed description of the task, including any necessary instructions.
@@ -14,53 +13,52 @@ completedAt (Date, optional): Timestamp when the task is marked as completed.
 
 */
 
-const toDoSchema = new mongoose.Schema({
-
-    title:{
-        type:String,
-        required:[true,'ToDo Must has a title'],
-        minLength:[5,'ToDo title must be at least 5 character'],
-        trim:true
+const toDoSchema = new mongoose.Schema(
+  {
+    title: {
+      type: String,
+      required: [true, "ToDo Must has a title"],
+      minLength: [5, "ToDo title must be at least 5 character"],
+      trim: true
     },
-    description:{
-        type:String,
-        required:[true,'ToDo Must has a description'],
-        minLength:[10,'ToDo description must be at least 10 character'],
-        trim:true
+    description: {
+      type: String,
+      required: [true, "ToDo Must has a description"],
+      minLength: [10, "ToDo description must be at least 10 character"],
+      trim: true
     },
-    assignedTo:{
-        type:[mongoose.Schema.Types.ObjectId],
-        ref:'User'
+    assignedTo: {
+      type: [mongoose.Schema.Types.ObjectId],
+      ref: "User"
     },
-    priority:{
-        type:String,
-        enum:['low','medium','high'],
-        default:'low'
+    priority: {
+      type: String,
+      enum: ["low", "medium", "high"],
+      default: "low"
     },
-    state:{
-        type:String,
-        required:[true,'ToDo Must has a state for the task'],
-        enum:{
-            values:['pending','in-progress','completed','overdue'],
-            message:'Status must be pending,in-progress,completed or overdue'
-        },
-        default:'pending'
+    state: {
+      type: String,
+      required: [true, "ToDo Must has a state for the task"],
+      enum: {
+        values: ["todo", "doing", "done"],
+        message: "Status must be pending,in-progress,completed or overdue"
+      },
+      default: "pending"
     },
-    photo:{
-        id:{
-            type:String,
-            required:true
-        },
-        url:{
-            type:String,
-            required:true
-        }
+    photo: {
+      id: {
+        type: String,
+        required: true
+      },
+      url: {
+        type: String,
+        required: true
+      }
     }
+  },
+  {
+    timestamps: true
+  }
+);
 
-},{
-    timestamps:true
-})
-
-
-
-export default mongoose.model('ToDo',toDoSchema);
+export default mongoose.model("ToDo", toDoSchema);

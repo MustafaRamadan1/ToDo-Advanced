@@ -1294,3 +1294,13 @@
   level: 'info',
   timestamp: '2024-10-26T10:56:14.727Z'
 }
+{
+  message: 'Database Connection Successfully',
+  level: 'info',
+  timestamp: '2024-10-26T18:05:50.777Z'
+}
+{
+  message: 'Server Listening on PORT 8000',
+  level: 'info',
+  timestamp: '2024-10-26T18:05:50.786Z'
+}
